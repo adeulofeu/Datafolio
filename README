@@ -1,1 +1,50 @@
-Data Sciences projects portfolio
+# Predicción de la demanda de enregía con modelos de inteligencia artificial
+
+## Descripción
+[Breve descripción del proyecto. Explica el propósito, la relevancia del estudio y el contexto en el que se enmarca la tesis de maestría.]
+
+## Objetivos
+- [Objetivo 1: Describir el primer objetivo principal del análisis o estudio.]
+- [Objetivo 2: Mencionar otro objetivo relevante para el proyecto.]
+- [Objetivo 3: Agregar objetivos adicionales según corresponda.]
+
+## Estructura del Repositorio
+El repositorio está organizado de la siguiente manera para facilitar la navegación y la reproducibilidad del proyecto:
+
+- **/data**: Conjuntos de datos originales y procesados.  
+  *Nota:* Los archivos más pesados se encuentran alojados en el siguiente link: 
+- **/notebooks**: Jupyter Notebooks y scripts exploratorios utilizados para análisis y visualizaciones.
+- **/results**: Resultados del análisis, gráficos, modelos entrenados y reportes generados.
+- **README.md**: Este archivo, que contiene una descripción general del proyecto.
+
+## Instalación
+Para replicar el entorno de desarrollo y ejecutar el proyecto, sigue los siguientes pasos:
+
+1. **Clonar el repositorio:**
+   bash:
+   git clone https://github.com/adeulofeu/TFM.git
+
+2. **Crear y activar un entorno virtual:**
+  bash:   
+  # Usando venv:
+  python -m venv env
+  source env/bin/activate  # En Linux/Mac
+  env\Scripts\activate     # En Windows
+
+3. Instalar las dependencias
+  bash:
+  pip install -r requirements.txt
+
+4. Uso
+Para el uso de los codigos se puede ingresar a la carpeta notebooks y ejecutar los notebooks de cada parte del desarrollo:
+  - Preprocesamiento de datos
+  - Analisis exploratorio de datos (EDA)
+  - Entrenamiento de modelos
+
+Para el uso de los modelos ya entrenados puede ingresar a la carpeta result.
+
+## Resultados y conclusiones
+
+## Referencias
+
+## Contacto
