@@ -1,12 +1,17 @@
 Uso de modelos de Machine Learning para la predicción de energía en Colombia
 
 ## Descripción
-Desarrollar un modelo predictivo utilizando redes neuronales recurrentes, modelo ARIMAX y bosque aleatorio para estimar la demanda de energía en Colombia. El modelo podrá evaluar la seguridad energética a corto plazo, optimizar la planificación y la gestión de recursos. También ayudará a identificar riesgos en los patrones de suministro y consumo, además de mejorar la toma de decisiones estratégicas. Se busca garantizar la sostenibilidad de los sistemas energéticos y promover el uso eficiente de los recursos existentes.
+Desarrollar un modelo predictivo utilizando redes neuronales recurrentes, modelo ARIMAX y bosque aleatorio para estimar la demanda de energía en Colombia. El modelo podrá
+evaluar la seguridad energética a corto plazo, optimizar la planificación y la gestión de recursos. También ayudará a identificar riesgos en los patrones de suministro y consumo,
+además de mejorar la toma de decisiones estratégicas. Se busca garantizar la sostenibilidad de los sistemas energéticos y promover el uso eficiente de los recursos existentes.
 
 ## Objetivos
-- [Objetivo 1: Describir el primer objetivo principal del análisis o estudio.]
-- [Objetivo 2: Mencionar otro objetivo relevante para el proyecto.]
-- [Objetivo 3: Agregar objetivos adicionales según corresponda.]
+- Encontrar bases de datos públicas que brinden información de la demanda energética en Colombia.
+-	Analizar datos históricos del consumo energético en Colombia buscando identificar patrones de consumo y tendencias que influyan en la demanda eléctrica.
+-	Desarrollar un modelo estadístico de ARIMAX que prediga la demanda energética a corto plazo en Colombia
+-	Desarrollar un modelo de bosque aleatorio que prediga la demanda energética a corto plazo en Colombia
+-	Desarrollar un modelo de redes neuronales recurrentes que prediga la demanda energética a corto plazo en Colombia
+-	Comparar modelos predictivos para verificar exactitud en metodologías planteadas.
 
 ## Estructura del Repositorio
 El repositorio está organizado de la siguiente manera para facilitar la navegación y la reproducibilidad del proyecto:
@@ -44,7 +49,41 @@ Para el uso de los codigos se puede ingresar a la carpeta notebooks y ejecutar l
 Para el uso de los modelos ya entrenados puede ingresar a la carpeta result.
 
 ## Resultados y conclusiones
+Se desarrollaron 3 modelos principales, ARIMAX, Random Forest y LSTM, de los cuales se hace explicación exhaustiva en las secciones anteriores de este capítulo, 
+a continuación, se muestran los resultados principales de cada modelo:
+
+Tabla. Comparación de resultados entre modelos.
+| Modelo         | Modificación                                                   | R2    |
+|----------------|----------------------------------------------------------------|-------|
+| ARIMAX         | N/A                                                            | -0.21 |
+| ARIMAX         | Logarítmico                                                    | -96.1 |
+| ARIMAX         | Escalamiento                                                   | -4.58 |
+| SARIMAX        | N/A                                                            | 0.56  |
+| Random Forest  | N/A                                                            | 0.79  |
+| LSTM           | Transformaciones Temporales<br>Diferencias Temporales<br>Normalización | 0.59  |
+
+
+El modelo ARIMAX no tiene el mejor ajuste, ni siquiera transformando los datos, esto sucede porque es una serie de tiempo con periodos cada 7 puntos,
+y el modelo ARIMAX no es capaz de predecir correctamente el comportamiento de los datos, por esta razón se opta por un modelo SARIMAX, el cual predice de mejor manera
+los extremos de la serie de tiempo. LSTM y SARIMAX, tienen un buen rendimiento y son capaces de seguir cambios drásticos en la serie, el R2 es mejor para LSTM,pero tiene un costo
+computacional mayor comparado con SARIMAX. Por otro lado, Random Forest muestra un muy buen comportamiento en comparación a los otros dos modelos, dentro de su desarrollose encuentra
+que al aplicar mejoras teniendo en cuenta la no estacionalidad, el modelo tiende al sobreajuste, por lo cual para implementar la mejoría a los datos se hace una aleatorización de la muestra
+de entreno y test, encontrando que Random Forest es el mejor modelo en términos de ajuste y de consumo computacional.
+
 
 ## Referencias
 
+- Abu-Salih, B., Wongthongtham, P., Morrison, G., Coutinho, K., Al-Okaily, M., & Huneiti, A. (2022). Short-term renewable energy consumption and generation forecasting: A case study of Western Australia. Heliyon,
+8(3), e09152. https://doi.org/10.1016/j.heliyon.2022.e09152 
+- Aderibigbe, A. O., Ani, E. C., Ohenhen, P., Ohalete, N., & Daraojimba, D. (2023). Enhancing Energy Efficiency with Ai: A review of machine learning models in electricity Demand Forecasting.
+Engineering Science & Technology Journal, 4(6), 341–356. https://doi.org/10.51594/estj.v4i6.636 
+- Aguilar Tirado, A. (2023). Modelo computacional de aprendizaje automático para la predicción de la demanda eléctrica [Tesis de Maestría]. Instituto Tecnológico Superior de Teziutlán, México.
+- Alguero, M. (2024, agosto 29). La gente seguirá consumiendo más energía eléctrica por el calor, ¿Colombia está preparada? El Colombiano. https://www.elcolombiano.com/negocios/cuanto-subira-el-consumo-de-energia-electrica-en-colombia-upme-EE25308491
+- Al Sadi, K., & Balachandran, W. (2024). Leveraging a 7-layer long short-term memory model for early detection and prevention of diabetes in Oman: An innovative approach. Bioengineering, 11(4), 379. https://doi.org/10.3390/bioengineering11040379
+- Al-Selwi, S., et al. (2024). RNN-LSTM: From applications to modeling techniques and beyond—systematic review. Journal of King Saud University - Computer and Information Sciences, 36(5), 102068. https://doi.org/10.1016/j.jksuci.2024.102068 
+- Alsaidan, I., Rizwan, M., & Alaraj, M. (2022). Solar energy forecasting using intelligent techniques: A step towards sustainable power generating system. Journal of intelligent & fuzzy systems, 42(2), 885–896. https://doi.org/10.3233/jifs-189757
+
 ## Contacto
+Andres Deulofeu, andresdeulo@gmail.com
+Delcides Cordoba, delcidescordoba@gmail.com
+Jenny Moreno, jenny.moreno67@gmail.com
