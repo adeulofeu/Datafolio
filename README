@@ -1,7 +1,7 @@
 Uso de modelos de Machine Learning para la predicción de energía en Colombia
 
 ## Descripción
-
+Desarrollar un modelo predictivo utilizando redes neuronales recurrentes, modelo ARIMAX y bosque aleatorio para estimar la demanda de energía en Colombia. El modelo podrá evaluar la seguridad energética a corto plazo, optimizar la planificación y la gestión de recursos. También ayudará a identificar riesgos en los patrones de suministro y consumo, además de mejorar la toma de decisiones estratégicas. Se busca garantizar la sostenibilidad de los sistemas energéticos y promover el uso eficiente de los recursos existentes.
 
 ## Objetivos
 - [Objetivo 1: Describir el primer objetivo principal del análisis o estudio.]
