@@ -53,13 +53,13 @@ Se desarrollaron 3 modelos principales, ARIMAX, Random Forest y LSTM, de los cua
 a continuación, se muestran los resultados principales de cada modelo:
 
 Tabla. Comparación de resultados entre modelos.
-| Modelo         | Modificación                                                   | R2    |
-|----------------|----------------------------------------------------------------|-------|
-| ARIMAX         | N/A                                                            | -0.21 |
-| ARIMAX         | Logarítmico                                                    | -96.1 |
-| ARIMAX         | Escalamiento                                                   | -4.58 |
-| SARIMAX        | N/A                                                            | 0.56  |
-| Random Forest  | N/A                                                            | 0.79  |
+| Modelo         | Modificación                                                           | R2    |
+|----------------|------------------------------------------------------------------------|-------|
+| ARIMAX         | N/A                                                                    | -0.21 |
+| ARIMAX         | Logarítmico                                                            | -96.1 |
+| ARIMAX         | Escalamiento                                                           | -4.58 |
+| SARIMAX        | N/A                                                                    | 0.56  |
+| Random Forest  | N/A                                                                    | 0.79  |
 | LSTM           | Transformaciones Temporales<br>Diferencias Temporales<br>Normalización | 0.59  |
 
 
